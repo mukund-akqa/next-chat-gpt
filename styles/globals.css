@@ -15,12 +15,15 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  .infoText {
+    @apply p-4 rounded-lg bg-gray-700/50 max-w-[300px]
   }
-  body {
-    color: white;
-    background: black;
+  .chatRow {
+    @apply rounded-lg px-5 py-3 flex justify-center items-center space-x-2 hover:bg-gray-700/70 cursor-pointer transition-all duration-200 ease-in-out
   }
 }
